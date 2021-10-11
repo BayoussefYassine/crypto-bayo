@@ -9,6 +9,7 @@ import Exchange from './components/Exchange';
 import Currencies from './components/Currencies';
 import CryptoDetails from './components/CryptoDetails';
 import News from './components/News';
+import PageNotFound from './components/PageNotFound';
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
             <Route exact path="/news">
               <News />
             </Route>
+            <Route component={PageNotFound} />
           </Switch>
         </Layout>
         <Footer />
