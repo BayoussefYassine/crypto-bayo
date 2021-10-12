@@ -9,13 +9,18 @@
   .site-layout-background {
     background: #fff;
   }
+
+  .ant-menu-submenu-title{
+    margin-left: 100px !important;
+  }
+
 .header-title{
     margin-top: 10px;
 
 }
   .search{
     margin: 25px auto;
-    width: 20%;
+    width: 250px
   }
   .news-description{
     font-size: 15px;
@@ -114,4 +119,59 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navbar{
+  background-color: #001529;
+}
+.container-fluid a{
+  color: white !important;
+}
+.container-fluid button{
+  border-color: white !important;
+}
+.nav-item{
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: flex;
+}
+.nav-item span{
+  margin-right: 8px;
+  align-self: center;
+  color: white;
+}
+.nav-item:hover{
+  padding: 10px;
+  background-color: #4169e1 !important;
+}
+
+@media screen and (min-width: 950px) {
+  .navbar{
+    display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  .site-layout-sub-header-background{
+    display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  .sider{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  main.ant-layout-content{
+    margin: 50px 0 !important;
+  }
+}
+@media screen and (max-width: 430px) {
+  .ant-table-row-expand-icon-cell{
+    display: none;
+  }
+  .ant-table-expanded-row-level-1{
+    display: block !important;
+  }
 }

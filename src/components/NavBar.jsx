@@ -12,6 +12,7 @@ const NavBar = () => {
     return (
        
                 <Sider
+                className='sider'
                 breakpoint="lg"
                 collapsedWidth="80"
                 onBreakpoint={broken => {

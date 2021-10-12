@@ -14,7 +14,6 @@ import PageNotFound from './components/PageNotFound';
 const App = () => {
   return (
    <Layout className='app' style={{minHeight: '100vh'}}>
-
       <Navbar />
       <Layout className="main">
         <Layout className="route">

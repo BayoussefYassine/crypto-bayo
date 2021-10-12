@@ -4,6 +4,8 @@ import { useGetExchangesQuery } from '../services/CryptoApi';
 import millify from 'millify';
 import HTMLReactParser from 'html-react-parser';
 import Loader from './Loader';
+import Nav from './nav';
+
 const Exchange = () => {
     const {data, isLoading} = useGetExchangesQuery();
     const { Header, Content } = Layout;
@@ -19,6 +21,7 @@ const Exchange = () => {
                                 markets: millify(exchange.numberOfMarkets),
                                 change: millify(exchange.marketShare)+'%',
                                 description: exchange.description
+                               
                             }
                         ))
                         ];
@@ -65,13 +68,14 @@ const Exchange = () => {
     return (
         
         <Layout>
-            {console.log(data?.data?.exchanges)}
-            <Header className="site-layout-sub-header-background" style={{ paddingLeft: 30, color: 'white' }}>
+            <Nav className='mobile-nav'/>
+            <Header className="site-layout-sub-header-background" style={{ paddingLeft: 30, color: 'white', backgroundColor: '#001529' }}>
                 <Title className='header-title' level={3} style={{color: 'white' }}>Exchanges</Title>
             </Header>
             <Content style={{ margin: '24px 16px 0' }}>
-                <div className="site-layout-background" style={{ padding: 24 }}>
+                <div className="site-layout-background">
                 <Table
+                className='tableee'
                 dataSource={dataSource[0]}
                 columns={columns}
                 expandable={{

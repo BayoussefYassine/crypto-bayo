@@ -7,6 +7,7 @@ import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
 import LineChart from './LineChart.jsx';
 import Loader from './Loader';
+import Nav from './nav';
 
 const { Header, Content } = Layout;
 const { Option } = Select;
@@ -47,8 +48,8 @@ const CryptoDetails = () => {
     return (
         
         <Layout>
-            {console.log(coinHistory)}
-            <Header className="site-layout-sub-header-background" style={{ paddingLeft: 30, color: 'white' }}>
+            <Nav className='mobile-nav'/>
+            <Header className="site-layout-sub-header-background" style={{ paddingLeft: 30, color: 'white', backgroundColor: '#001529' }}>
                 <Title className='header-title' level={4} style={{color: 'white' }}>Crypto Details</Title>
             </Header>
             <Content style={{ margin: '24px 16px 0' }}>
@@ -77,7 +78,7 @@ const CryptoDetails = () => {
                     <div className='chart'>
 
                         <Row justify='space-between' style={{marginTop: 50}}>
-                            <Col span={10}>
+                            <Col xs={24} sm={24} md={11}>
                                 <Card className='crad-details'>
                                     <div className='card-details-title'>
                                         <Meta
@@ -104,7 +105,7 @@ const CryptoDetails = () => {
                                 </Card>
                             </Col>
 
-                            <Col span={10}>
+                            <Col xs={24} sm={24} md={11}>
                                 <Card className='crad-details'>
                                     <div className='card-details-title'>
                                         <Meta
@@ -135,14 +136,14 @@ const CryptoDetails = () => {
                         </Row>
 
                         <Row className='crypto-info' justify='space-between'>
-                        <Col span={12}>
+                        <Col xs={24} sm={24} md={12}>
                             <Title level={2}>
                                 What is {data?.data?.coin?.name}                                
                             </Title>
                             {HTMLReactParser(data?.data?.coin?.description)}
                         </Col>
 
-                        <Col span={10}>
+                        <Col xs={24} sm={24} md={12}>
                                 <Title level={2}>
                                     {data?.data?.coin?.name} Links                              
                                  </Title>
